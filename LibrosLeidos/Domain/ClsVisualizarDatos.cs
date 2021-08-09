@@ -8,5 +8,10 @@ namespace LibrosLeidos.Domain
 {
     class ClsVisualizarDatos
     {
+        public void AbrirFrmIngresoLibros()
+        {
+            FrmIngresoLibros frmIngresoLibros = new FrmIngresoLibros();
+            frmIngresoLibros.ShowDialog();
+        }
     }
 }

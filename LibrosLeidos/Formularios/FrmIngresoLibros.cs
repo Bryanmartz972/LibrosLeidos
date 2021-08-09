@@ -11,16 +11,13 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace LibrosLeidos
 {
-    public partial class FrmIngresoDatos : KryptonForm
+    public partial class FrmIngresoLibros : KryptonForm
     {
-        public FrmIngresoDatos()
+        public FrmIngresoLibros()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

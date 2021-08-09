@@ -1,7 +1,7 @@
 ﻿
 namespace LibrosLeidos
 {
-    partial class FrmVisualizacionDatos
+    partial class FrmVisualizarLibros
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,17 @@ namespace LibrosLeidos
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVisualizacionDatos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVisualizarLibros));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.SuspendLayout();
             // 
-            // FrmVisualizacionDatos
+            // FrmVisualizarLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmVisualizacionDatos";
+            this.Name = "FrmVisualizarLibros";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -11,9 +11,9 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace LibrosLeidos
 {
-    public partial class FrmVisualizacionDatos : KryptonForm
+    public partial class FrmVisualizarLibros : KryptonForm
     {
-        public FrmVisualizacionDatos()
+        public FrmVisualizarLibros()
         {
             InitializeComponent();
         }

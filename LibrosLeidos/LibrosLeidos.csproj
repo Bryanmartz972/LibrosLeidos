@@ -69,25 +69,25 @@
     <Compile Include="Domain\BusinessLogicLayer.cs" />
     <Compile Include="Domain\ClsIngresoDatos.cs" />
     <Compile Include="Domain\ClsVisualizarDatos.cs" />
-    <Compile Include="Formularios\FrmIngresoDatos.cs">
+    <Compile Include="Formularios\FrmIngresoLibros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmIngresoDatos.Designer.cs">
-      <DependentUpon>FrmIngresoDatos.cs</DependentUpon>
+    <Compile Include="Formularios\FrmIngresoLibros.Designer.cs">
+      <DependentUpon>FrmIngresoLibros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmVisualizarDatos.cs">
+    <Compile Include="Formularios\FrmVisualizarLibros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmVisualizarDatos.Designer.cs">
-      <DependentUpon>FrmVisualizarDatos.cs</DependentUpon>
+    <Compile Include="Formularios\FrmVisualizarLibros.Designer.cs">
+      <DependentUpon>FrmVisualizarLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\FrmIngresoDatos.resx">
-      <DependentUpon>FrmIngresoDatos.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmIngresoLibros.resx">
+      <DependentUpon>FrmIngresoLibros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmVisualizarDatos.resx">
-      <DependentUpon>FrmVisualizarDatos.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmVisualizarLibros.resx">
+      <DependentUpon>FrmVisualizarLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,7 +1,7 @@
 ﻿
 namespace LibrosLeidos
 {
-    partial class FrmIngresoDatos
+    partial class FrmIngresoLibros
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace LibrosLeidos
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIngresoDatos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIngresoLibros));
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -39,6 +39,12 @@ namespace LibrosLeidos
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nmrAnoLeido = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.txtNombreLibro = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtAutorLibro = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtSagaSerieTrilogia = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtNumeroSaga = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.SuspendLayout();
             // 
             // kryptonButton1
@@ -146,12 +152,67 @@ namespace LibrosLeidos
             this.label6.TabIndex = 6;
             this.label6.Text = "Año leido:";
             // 
-            // FrmIngresoDatos
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(468, 429);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(236, 64);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Numero de libro\r\n    leido ese año:";
+            // 
+            // nmrAnoLeido
+            // 
+            this.nmrAnoLeido.Location = new System.Drawing.Point(268, 527);
+            this.nmrAnoLeido.Name = "nmrAnoLeido";
+            this.nmrAnoLeido.Size = new System.Drawing.Size(120, 26);
+            this.nmrAnoLeido.TabIndex = 8;
+            // 
+            // txtNombreLibro
+            // 
+            this.txtNombreLibro.Location = new System.Drawing.Point(272, 172);
+            this.txtNombreLibro.Name = "txtNombreLibro";
+            this.txtNombreLibro.Size = new System.Drawing.Size(100, 27);
+            this.txtNombreLibro.TabIndex = 9;
+            this.txtNombreLibro.Text = "kryptonTextBox1";
+            // 
+            // txtAutorLibro
+            // 
+            this.txtAutorLibro.Location = new System.Drawing.Point(272, 261);
+            this.txtAutorLibro.Name = "txtAutorLibro";
+            this.txtAutorLibro.Size = new System.Drawing.Size(100, 27);
+            this.txtAutorLibro.TabIndex = 10;
+            this.txtAutorLibro.Text = "kryptonTextBox1";
+            // 
+            // txtSagaSerieTrilogia
+            // 
+            this.txtSagaSerieTrilogia.Location = new System.Drawing.Point(313, 350);
+            this.txtSagaSerieTrilogia.Name = "txtSagaSerieTrilogia";
+            this.txtSagaSerieTrilogia.Size = new System.Drawing.Size(100, 27);
+            this.txtSagaSerieTrilogia.TabIndex = 11;
+            this.txtSagaSerieTrilogia.Text = "kryptonTextBox1";
+            // 
+            // txtNumeroSaga
+            // 
+            this.txtNumeroSaga.Location = new System.Drawing.Point(272, 434);
+            this.txtNumeroSaga.Name = "txtNumeroSaga";
+            this.txtNumeroSaga.Size = new System.Drawing.Size(100, 27);
+            this.txtNumeroSaga.TabIndex = 12;
+            this.txtNumeroSaga.Text = "kryptonTextBox1";
+            // 
+            // FrmIngresoLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.txtNumeroSaga);
+            this.Controls.Add(this.txtSagaSerieTrilogia);
+            this.Controls.Add(this.txtAutorLibro);
+            this.Controls.Add(this.txtNombreLibro);
+            this.Controls.Add(this.nmrAnoLeido);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -162,12 +223,11 @@ namespace LibrosLeidos
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmIngresoDatos";
+            this.Name = "FrmIngresoLibros";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Libros leidos";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,6 +243,12 @@ namespace LibrosLeidos
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown nmrAnoLeido;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNombreLibro;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtAutorLibro;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSagaSerieTrilogia;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNumeroSaga;
     }
 }
 

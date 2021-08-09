@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibrosLeidos.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,21 @@ namespace LibrosLeidos.Domain
 {
     class BusinessLogicLayer
     {
+        private DataAccessLayer _dataAccessLayer;
+
+        public BusinessLogicLayer()
+        {
+            _dataAccessLayer = new DataAccessLayer();
+        }
+
+        public ClsIngresoDatos GuardarLibro(ClsIngresoDatos ingreso)
+        {
+            if (ingreso.id == 0)
+                _dataAccessLayer.InsertarLibro(ingreso);
+            //else
+            // _dataAccessLayer.ModificarLibro();
+
+            return ingreso;
+        }
     }
 }
