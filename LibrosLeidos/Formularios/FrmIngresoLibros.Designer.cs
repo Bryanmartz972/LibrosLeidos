@@ -31,7 +31,7 @@ namespace LibrosLeidos
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIngresoLibros));
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnGuardar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,15 +45,68 @@ namespace LibrosLeidos
             this.txtAutorLibro = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSagaSerieTrilogia = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtNumeroSaga = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.SuspendLayout();
             // 
-            // kryptonButton1
+            // btnGuardar
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(848, 583);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(90, 25);
-            this.kryptonButton1.TabIndex = 0;
-            this.kryptonButton1.Values.Text = "kryptonButton1";
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.Location = new System.Drawing.Point(805, 581);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnGuardar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnGuardar.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnGuardar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnGuardar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnGuardar.OverrideDefault.Border.ColorAngle = 45F;
+            this.btnGuardar.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnGuardar.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnGuardar.OverrideDefault.Border.Rounding = 10;
+            this.btnGuardar.OverrideDefault.Border.Width = 1;
+            this.btnGuardar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnGuardar.Size = new System.Drawing.Size(134, 43);
+            this.btnGuardar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnGuardar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnGuardar.StateCommon.Back.ColorAngle = 45F;
+            this.btnGuardar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnGuardar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnGuardar.StateCommon.Border.ColorAngle = 45F;
+            this.btnGuardar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnGuardar.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnGuardar.StateCommon.Border.Rounding = 10;
+            this.btnGuardar.StateCommon.Border.Width = 1;
+            this.btnGuardar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnGuardar.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnGuardar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(96)))), ((int)(((byte)(219)))));
+            this.btnGuardar.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(92)))), ((int)(((byte)(209)))));
+            this.btnGuardar.StatePressed.Back.ColorAngle = 135F;
+            this.btnGuardar.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(96)))), ((int)(((byte)(219)))));
+            this.btnGuardar.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(92)))), ((int)(((byte)(209)))));
+            this.btnGuardar.StatePressed.Border.ColorAngle = 135F;
+            this.btnGuardar.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnGuardar.StatePressed.Border.Rounding = 10;
+            this.btnGuardar.StatePressed.Border.Width = 1;
+            this.btnGuardar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnGuardar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnGuardar.StateTracking.Back.ColorAngle = 45F;
+            this.btnGuardar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnGuardar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnGuardar.StateTracking.Border.ColorAngle = 45F;
+            this.btnGuardar.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnGuardar.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnGuardar.StateTracking.Border.Rounding = 10;
+            this.btnGuardar.StateTracking.Border.Width = 1;
+            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.Values.Text = "Guardar";
             // 
             // kryptonPalette1
             // 
@@ -136,7 +189,7 @@ namespace LibrosLeidos
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 429);
+            this.label5.Location = new System.Drawing.Point(17, 444);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(249, 32);
             this.label5.TabIndex = 5;
@@ -146,7 +199,7 @@ namespace LibrosLeidos
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(109, 521);
+            this.label6.Location = new System.Drawing.Point(109, 538);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 32);
             this.label6.TabIndex = 6;
@@ -164,42 +217,132 @@ namespace LibrosLeidos
             // 
             // nmrAnoLeido
             // 
-            this.nmrAnoLeido.Location = new System.Drawing.Point(268, 527);
+            this.nmrAnoLeido.Location = new System.Drawing.Point(268, 538);
+            this.nmrAnoLeido.Maximum = new decimal(new int[] {
+            2080,
+            0,
+            0,
+            0});
+            this.nmrAnoLeido.Minimum = new decimal(new int[] {
+            2010,
+            0,
+            0,
+            0});
             this.nmrAnoLeido.Name = "nmrAnoLeido";
-            this.nmrAnoLeido.Size = new System.Drawing.Size(120, 26);
+            this.nmrAnoLeido.Size = new System.Drawing.Size(120, 33);
+            this.nmrAnoLeido.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.nmrAnoLeido.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.nmrAnoLeido.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.nmrAnoLeido.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.nmrAnoLeido.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.nmrAnoLeido.StateCommon.Border.Rounding = 5;
+            this.nmrAnoLeido.StateCommon.Border.Width = 1;
+            this.nmrAnoLeido.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.nmrAnoLeido.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrAnoLeido.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.nmrAnoLeido.TabIndex = 8;
+            this.nmrAnoLeido.Value = new decimal(new int[] {
+            2010,
+            0,
+            0,
+            0});
             // 
             // txtNombreLibro
             // 
-            this.txtNombreLibro.Location = new System.Drawing.Point(272, 172);
+            this.txtNombreLibro.Location = new System.Drawing.Point(272, 170);
             this.txtNombreLibro.Name = "txtNombreLibro";
-            this.txtNombreLibro.Size = new System.Drawing.Size(100, 27);
+            this.txtNombreLibro.Size = new System.Drawing.Size(667, 29);
+            this.txtNombreLibro.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtNombreLibro.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.txtNombreLibro.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.txtNombreLibro.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtNombreLibro.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtNombreLibro.StateCommon.Border.Rounding = 5;
+            this.txtNombreLibro.StateCommon.Border.Width = 1;
+            this.txtNombreLibro.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.txtNombreLibro.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreLibro.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.txtNombreLibro.TabIndex = 9;
-            this.txtNombreLibro.Text = "kryptonTextBox1";
             // 
             // txtAutorLibro
             // 
-            this.txtAutorLibro.Location = new System.Drawing.Point(272, 261);
+            this.txtAutorLibro.Location = new System.Drawing.Point(272, 259);
             this.txtAutorLibro.Name = "txtAutorLibro";
-            this.txtAutorLibro.Size = new System.Drawing.Size(100, 27);
+            this.txtAutorLibro.Size = new System.Drawing.Size(666, 29);
+            this.txtAutorLibro.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtAutorLibro.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.txtAutorLibro.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.txtAutorLibro.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtAutorLibro.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtAutorLibro.StateCommon.Border.Rounding = 5;
+            this.txtAutorLibro.StateCommon.Border.Width = 1;
+            this.txtAutorLibro.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.txtAutorLibro.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutorLibro.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.txtAutorLibro.TabIndex = 10;
-            this.txtAutorLibro.Text = "kryptonTextBox1";
             // 
             // txtSagaSerieTrilogia
             // 
             this.txtSagaSerieTrilogia.Location = new System.Drawing.Point(313, 350);
             this.txtSagaSerieTrilogia.Name = "txtSagaSerieTrilogia";
-            this.txtSagaSerieTrilogia.Size = new System.Drawing.Size(100, 27);
+            this.txtSagaSerieTrilogia.Size = new System.Drawing.Size(625, 29);
+            this.txtSagaSerieTrilogia.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtSagaSerieTrilogia.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.txtSagaSerieTrilogia.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.txtSagaSerieTrilogia.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtSagaSerieTrilogia.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtSagaSerieTrilogia.StateCommon.Border.Rounding = 5;
+            this.txtSagaSerieTrilogia.StateCommon.Border.Width = 1;
+            this.txtSagaSerieTrilogia.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.txtSagaSerieTrilogia.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSagaSerieTrilogia.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.txtSagaSerieTrilogia.TabIndex = 11;
-            this.txtSagaSerieTrilogia.Text = "kryptonTextBox1";
             // 
             // txtNumeroSaga
             // 
-            this.txtNumeroSaga.Location = new System.Drawing.Point(272, 434);
+            this.txtNumeroSaga.Location = new System.Drawing.Point(272, 449);
             this.txtNumeroSaga.Name = "txtNumeroSaga";
-            this.txtNumeroSaga.Size = new System.Drawing.Size(100, 27);
+            this.txtNumeroSaga.Size = new System.Drawing.Size(120, 29);
+            this.txtNumeroSaga.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtNumeroSaga.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.txtNumeroSaga.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.txtNumeroSaga.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtNumeroSaga.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtNumeroSaga.StateCommon.Border.Rounding = 5;
+            this.txtNumeroSaga.StateCommon.Border.Width = 1;
+            this.txtNumeroSaga.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.txtNumeroSaga.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroSaga.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.txtNumeroSaga.TabIndex = 12;
-            this.txtNumeroSaga.Text = "kryptonTextBox1";
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(710, 449);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(116, 29);
+            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox1.StateCommon.Border.Rounding = 5;
+            this.kryptonTextBox1.StateCommon.Border.Width = 1;
+            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
+            this.kryptonTextBox1.TabIndex = 13;
             // 
             // FrmIngresoLibros
             // 
@@ -207,6 +350,7 @@ namespace LibrosLeidos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.kryptonTextBox1);
             this.Controls.Add(this.txtNumeroSaga);
             this.Controls.Add(this.txtSagaSerieTrilogia);
             this.Controls.Add(this.txtAutorLibro);
@@ -219,7 +363,7 @@ namespace LibrosLeidos
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.kryptonButton1);
+            this.Controls.Add(this.btnGuardar);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -227,6 +371,13 @@ namespace LibrosLeidos
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Text = "Libros leidos";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,7 +386,7 @@ namespace LibrosLeidos
 
         #endregion
 
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnGuardar;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -249,6 +400,7 @@ namespace LibrosLeidos
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtAutorLibro;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSagaSerieTrilogia;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNumeroSaga;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
     }
 }
 
