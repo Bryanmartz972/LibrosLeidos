@@ -51,5 +51,43 @@ namespace LibrosLeidos.Data
                 conn.Close();
             }
         }
+
+        public List<ClsIngresoDatos> ObtenerLibros()
+        {
+            List<ClsIngresoDatos> libros = new List<ClsIngresoDatos>();
+
+            try
+            {
+                conn.Open();
+                string query = @"SELECT numero_id_ano, nombre_libro, nombre_autor, saga_serie_trilogia, numero_saga, ano_leido FROM Libros ORDER BY ano_leido desc, numero_id_ano desc";
+                SqlCommand command = new SqlCommand(query, conn);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    libros.Add(new ClsIngresoDatos
+                    {
+                        numero_id_ano = int.Parse(reader["numero_id_ano"].ToString()),
+                        nombre_libro = reader["nombre_libro"].ToString(),
+                        nombre_autor = reader["nombre_autor"].ToString(),
+                        saga_serie_trilogia = reader["saga_serie_trilogia"].ToString(),
+                        numero_saga = Double.Parse(reader["numero_saga"].ToString()),
+                        ano_leido = int.Parse(reader["ano_leido"].ToString())
+
+                    });
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return libros;
+        }
     }
 }

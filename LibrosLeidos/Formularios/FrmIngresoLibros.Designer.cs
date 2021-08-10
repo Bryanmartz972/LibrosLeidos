@@ -54,7 +54,8 @@ namespace LibrosLeidos
             // btnGuardar
             // 
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.Location = new System.Drawing.Point(805, 581);
+            this.btnGuardar.Location = new System.Drawing.Point(604, 472);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
             this.btnGuardar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
@@ -69,7 +70,7 @@ namespace LibrosLeidos
             this.btnGuardar.OverrideDefault.Border.Rounding = 10;
             this.btnGuardar.OverrideDefault.Border.Width = 1;
             this.btnGuardar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnGuardar.Size = new System.Drawing.Size(134, 43);
+            this.btnGuardar.Size = new System.Drawing.Size(100, 35);
             this.btnGuardar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
             this.btnGuardar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
             this.btnGuardar.StateCommon.Back.ColorAngle = 45F;
@@ -153,9 +154,10 @@ namespace LibrosLeidos
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(333, 22);
+            this.label1.Location = new System.Drawing.Point(229, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 44);
+            this.label1.Size = new System.Drawing.Size(261, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingreso de libros";
             // 
@@ -163,9 +165,10 @@ namespace LibrosLeidos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 167);
+            this.label2.Location = new System.Drawing.Point(9, 136);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 32);
+            this.label2.Size = new System.Drawing.Size(199, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre del libro:";
             // 
@@ -173,9 +176,10 @@ namespace LibrosLeidos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 256);
+            this.label3.Location = new System.Drawing.Point(13, 208);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(245, 32);
+            this.label3.Size = new System.Drawing.Size(192, 26);
             this.label3.TabIndex = 3;
             this.label3.Text = "Autor/a del libro:";
             // 
@@ -183,9 +187,10 @@ namespace LibrosLeidos
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 345);
+            this.label4.Location = new System.Drawing.Point(13, 280);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(290, 32);
+            this.label4.Size = new System.Drawing.Size(225, 26);
             this.label4.TabIndex = 4;
             this.label4.Text = "Saga/Serie/Trilogía:";
             // 
@@ -193,9 +198,10 @@ namespace LibrosLeidos
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 444);
+            this.label5.Location = new System.Drawing.Point(13, 361);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(249, 32);
+            this.label5.Size = new System.Drawing.Size(195, 26);
             this.label5.TabIndex = 5;
             this.label5.Text = "Numero de saga:";
             // 
@@ -203,9 +209,10 @@ namespace LibrosLeidos
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(109, 538);
+            this.label6.Location = new System.Drawing.Point(82, 437);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 32);
+            this.label6.Size = new System.Drawing.Size(119, 26);
             this.label6.TabIndex = 6;
             this.label6.Text = "Año leido:";
             // 
@@ -213,15 +220,17 @@ namespace LibrosLeidos
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(468, 429);
+            this.label7.Location = new System.Drawing.Point(351, 349);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(236, 64);
+            this.label7.Size = new System.Drawing.Size(185, 52);
             this.label7.TabIndex = 7;
             this.label7.Text = "Numero de libro\r\n    leido ese año:";
             // 
             // nmrAnoLeido
             // 
-            this.nmrAnoLeido.Location = new System.Drawing.Point(268, 538);
+            this.nmrAnoLeido.Location = new System.Drawing.Point(201, 437);
+            this.nmrAnoLeido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nmrAnoLeido.Maximum = new decimal(new int[] {
             2080,
             0,
@@ -233,7 +242,7 @@ namespace LibrosLeidos
             0,
             0});
             this.nmrAnoLeido.Name = "nmrAnoLeido";
-            this.nmrAnoLeido.Size = new System.Drawing.Size(120, 33);
+            this.nmrAnoLeido.Size = new System.Drawing.Size(90, 29);
             this.nmrAnoLeido.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.nmrAnoLeido.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.nmrAnoLeido.StateCommon.Border.Color2 = System.Drawing.Color.White;
@@ -255,9 +264,10 @@ namespace LibrosLeidos
             // 
             // txtNombreLibro
             // 
-            this.txtNombreLibro.Location = new System.Drawing.Point(272, 170);
+            this.txtNombreLibro.Location = new System.Drawing.Point(204, 138);
+            this.txtNombreLibro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreLibro.Name = "txtNombreLibro";
-            this.txtNombreLibro.Size = new System.Drawing.Size(667, 29);
+            this.txtNombreLibro.Size = new System.Drawing.Size(500, 25);
             this.txtNombreLibro.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtNombreLibro.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.txtNombreLibro.StateCommon.Border.Color2 = System.Drawing.Color.White;
@@ -274,9 +284,10 @@ namespace LibrosLeidos
             // 
             // txtAutorLibro
             // 
-            this.txtAutorLibro.Location = new System.Drawing.Point(272, 259);
+            this.txtAutorLibro.Location = new System.Drawing.Point(204, 210);
+            this.txtAutorLibro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAutorLibro.Name = "txtAutorLibro";
-            this.txtAutorLibro.Size = new System.Drawing.Size(666, 29);
+            this.txtAutorLibro.Size = new System.Drawing.Size(500, 25);
             this.txtAutorLibro.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtAutorLibro.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.txtAutorLibro.StateCommon.Border.Color2 = System.Drawing.Color.White;
@@ -293,9 +304,10 @@ namespace LibrosLeidos
             // 
             // txtSagaSerieTrilogia
             // 
-            this.txtSagaSerieTrilogia.Location = new System.Drawing.Point(313, 350);
+            this.txtSagaSerieTrilogia.Location = new System.Drawing.Point(235, 284);
+            this.txtSagaSerieTrilogia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSagaSerieTrilogia.Name = "txtSagaSerieTrilogia";
-            this.txtSagaSerieTrilogia.Size = new System.Drawing.Size(625, 29);
+            this.txtSagaSerieTrilogia.Size = new System.Drawing.Size(469, 25);
             this.txtSagaSerieTrilogia.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtSagaSerieTrilogia.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.txtSagaSerieTrilogia.StateCommon.Border.Color2 = System.Drawing.Color.White;
@@ -312,9 +324,10 @@ namespace LibrosLeidos
             // 
             // txtNumeroSaga
             // 
-            this.txtNumeroSaga.Location = new System.Drawing.Point(272, 449);
+            this.txtNumeroSaga.Location = new System.Drawing.Point(204, 365);
+            this.txtNumeroSaga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumeroSaga.Name = "txtNumeroSaga";
-            this.txtNumeroSaga.Size = new System.Drawing.Size(120, 29);
+            this.txtNumeroSaga.Size = new System.Drawing.Size(90, 25);
             this.txtNumeroSaga.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtNumeroSaga.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.txtNumeroSaga.StateCommon.Border.Color2 = System.Drawing.Color.White;
@@ -332,9 +345,10 @@ namespace LibrosLeidos
             // 
             // txtNumeroLibroLeido
             // 
-            this.txtNumeroLibroLeido.Location = new System.Drawing.Point(710, 449);
+            this.txtNumeroLibroLeido.Location = new System.Drawing.Point(532, 365);
+            this.txtNumeroLibroLeido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumeroLibroLeido.Name = "txtNumeroLibroLeido";
-            this.txtNumeroLibroLeido.Size = new System.Drawing.Size(116, 29);
+            this.txtNumeroLibroLeido.Size = new System.Drawing.Size(87, 25);
             this.txtNumeroLibroLeido.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtNumeroLibroLeido.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.txtNumeroLibroLeido.StateCommon.Border.Color2 = System.Drawing.Color.White;
@@ -353,7 +367,8 @@ namespace LibrosLeidos
             // btnLibrosLeidos
             // 
             this.btnLibrosLeidos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLibrosLeidos.Location = new System.Drawing.Point(713, 29);
+            this.btnLibrosLeidos.Location = new System.Drawing.Point(535, 24);
+            this.btnLibrosLeidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLibrosLeidos.Name = "btnLibrosLeidos";
             this.btnLibrosLeidos.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.btnLibrosLeidos.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -368,7 +383,7 @@ namespace LibrosLeidos
             this.btnLibrosLeidos.OverrideDefault.Border.Rounding = 10;
             this.btnLibrosLeidos.OverrideDefault.Border.Width = 1;
             this.btnLibrosLeidos.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnLibrosLeidos.Size = new System.Drawing.Size(229, 43);
+            this.btnLibrosLeidos.Size = new System.Drawing.Size(172, 35);
             this.btnLibrosLeidos.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.btnLibrosLeidos.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.btnLibrosLeidos.StateCommon.Back.ColorAngle = 45F;
@@ -414,18 +429,19 @@ namespace LibrosLeidos
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LibrosLeidos.Properties.Resources.flecha_izquierda;
-            this.pictureBox1.Location = new System.Drawing.Point(921, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(691, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 21);
+            this.pictureBox1.Size = new System.Drawing.Size(27, 17);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
             // FrmIngresoLibros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(982, 653);
+            this.ClientSize = new System.Drawing.Size(736, 531);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLibrosLeidos);
             this.Controls.Add(this.txtNumeroLibroLeido);
@@ -445,6 +461,7 @@ namespace LibrosLeidos
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmIngresoLibros";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

@@ -25,5 +25,10 @@ namespace LibrosLeidos.Domain
 
             return ingreso;
         }
+
+        public List<ClsIngresoDatos> ObtenerLibros()
+        {
+           return _dataAccessLayer.ObtenerLibros();
+        }
     }
 }
