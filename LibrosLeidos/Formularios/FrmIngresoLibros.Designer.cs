@@ -45,7 +45,10 @@ namespace LibrosLeidos
             this.txtAutorLibro = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSagaSerieTrilogia = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtNumeroSaga = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtNumeroLibroLeido = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.btnLibrosLeidos = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardar
@@ -105,8 +108,9 @@ namespace LibrosLeidos
             this.btnGuardar.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btnGuardar.StateTracking.Border.Rounding = 10;
             this.btnGuardar.StateTracking.Border.Width = 1;
-            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Values.Text = "Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // kryptonPalette1
             // 
@@ -242,7 +246,7 @@ namespace LibrosLeidos
             this.nmrAnoLeido.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.nmrAnoLeido.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmrAnoLeido.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
-            this.nmrAnoLeido.TabIndex = 8;
+            this.nmrAnoLeido.TabIndex = 5;
             this.nmrAnoLeido.Value = new decimal(new int[] {
             2010,
             0,
@@ -266,7 +270,7 @@ namespace LibrosLeidos
             this.txtNombreLibro.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtNombreLibro.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreLibro.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
-            this.txtNombreLibro.TabIndex = 9;
+            this.txtNombreLibro.TabIndex = 1;
             // 
             // txtAutorLibro
             // 
@@ -285,7 +289,7 @@ namespace LibrosLeidos
             this.txtAutorLibro.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtAutorLibro.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutorLibro.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
-            this.txtAutorLibro.TabIndex = 10;
+            this.txtAutorLibro.TabIndex = 2;
             // 
             // txtSagaSerieTrilogia
             // 
@@ -304,7 +308,7 @@ namespace LibrosLeidos
             this.txtSagaSerieTrilogia.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtSagaSerieTrilogia.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSagaSerieTrilogia.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
-            this.txtSagaSerieTrilogia.TabIndex = 11;
+            this.txtSagaSerieTrilogia.TabIndex = 3;
             // 
             // txtNumeroSaga
             // 
@@ -323,26 +327,98 @@ namespace LibrosLeidos
             this.txtNumeroSaga.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtNumeroSaga.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumeroSaga.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
-            this.txtNumeroSaga.TabIndex = 12;
+            this.txtNumeroSaga.TabIndex = 4;
+            this.txtNumeroSaga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroSaga_KeyPress);
             // 
-            // kryptonTextBox1
+            // txtNumeroLibroLeido
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(710, 449);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(116, 29);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtNumeroLibroLeido.Location = new System.Drawing.Point(710, 449);
+            this.txtNumeroLibroLeido.Name = "txtNumeroLibroLeido";
+            this.txtNumeroLibroLeido.Size = new System.Drawing.Size(116, 29);
+            this.txtNumeroLibroLeido.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtNumeroLibroLeido.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.txtNumeroLibroLeido.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.txtNumeroLibroLeido.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 5;
-            this.kryptonTextBox1.StateCommon.Border.Width = 1;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
-            this.kryptonTextBox1.TabIndex = 13;
+            this.txtNumeroLibroLeido.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtNumeroLibroLeido.StateCommon.Border.Rounding = 5;
+            this.txtNumeroLibroLeido.StateCommon.Border.Width = 1;
+            this.txtNumeroLibroLeido.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.txtNumeroLibroLeido.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroLibroLeido.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
+            this.txtNumeroLibroLeido.TabIndex = 6;
+            this.txtNumeroLibroLeido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroLibroLeido_KeyPress);
+            // 
+            // btnLibrosLeidos
+            // 
+            this.btnLibrosLeidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLibrosLeidos.Location = new System.Drawing.Point(713, 29);
+            this.btnLibrosLeidos.Name = "btnLibrosLeidos";
+            this.btnLibrosLeidos.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnLibrosLeidos.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.OverrideDefault.Border.ColorAngle = 45F;
+            this.btnLibrosLeidos.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLibrosLeidos.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLibrosLeidos.OverrideDefault.Border.Rounding = 10;
+            this.btnLibrosLeidos.OverrideDefault.Border.Width = 1;
+            this.btnLibrosLeidos.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnLibrosLeidos.Size = new System.Drawing.Size(229, 43);
+            this.btnLibrosLeidos.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StateCommon.Back.ColorAngle = 45F;
+            this.btnLibrosLeidos.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StateCommon.Border.ColorAngle = 45F;
+            this.btnLibrosLeidos.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLibrosLeidos.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLibrosLeidos.StateCommon.Border.Rounding = 10;
+            this.btnLibrosLeidos.StateCommon.Border.Width = 1;
+            this.btnLibrosLeidos.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(218)))), ((int)(((byte)(198)))));
+            this.btnLibrosLeidos.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(218)))), ((int)(((byte)(198)))));
+            this.btnLibrosLeidos.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLibrosLeidos.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StatePressed.Back.ColorAngle = 135F;
+            this.btnLibrosLeidos.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StatePressed.Border.ColorAngle = 135F;
+            this.btnLibrosLeidos.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLibrosLeidos.StatePressed.Border.Rounding = 10;
+            this.btnLibrosLeidos.StatePressed.Border.Width = 1;
+            this.btnLibrosLeidos.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StateTracking.Back.ColorAngle = 45F;
+            this.btnLibrosLeidos.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLibrosLeidos.StateTracking.Border.ColorAngle = 45F;
+            this.btnLibrosLeidos.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLibrosLeidos.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLibrosLeidos.StateTracking.Border.Rounding = 10;
+            this.btnLibrosLeidos.StateTracking.Border.Width = 1;
+            this.btnLibrosLeidos.TabIndex = 8;
+            this.btnLibrosLeidos.Values.Text = "Ver libros leidos";
+            this.btnLibrosLeidos.Click += new System.EventHandler(this.btnLibrosLeidos_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LibrosLeidos.Properties.Resources.flecha_izquierda;
+            this.pictureBox1.Location = new System.Drawing.Point(921, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 21);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmIngresoLibros
             // 
@@ -350,7 +426,9 @@ namespace LibrosLeidos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(982, 653);
-            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnLibrosLeidos);
+            this.Controls.Add(this.txtNumeroLibroLeido);
             this.Controls.Add(this.txtNumeroSaga);
             this.Controls.Add(this.txtSagaSerieTrilogia);
             this.Controls.Add(this.txtAutorLibro);
@@ -379,6 +457,7 @@ namespace LibrosLeidos
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Text = "Libros leidos";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,7 +479,9 @@ namespace LibrosLeidos
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtAutorLibro;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSagaSerieTrilogia;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNumeroSaga;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNumeroLibroLeido;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLibrosLeidos;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

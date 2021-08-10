@@ -116,6 +116,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Logo - Libros leidos.ico" />
+    <None Include="Resources\flecha-izquierda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
