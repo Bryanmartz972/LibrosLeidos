@@ -16,7 +16,7 @@ namespace LibrosLeidos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmIngresoLibros());
+            Application.Run(new FrmVisualizarLibros());
         }
     }
 }

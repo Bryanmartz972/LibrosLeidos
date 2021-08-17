@@ -51,7 +51,7 @@ namespace LibrosLeidos.Data
             }
         }
 
-        public List<ClsIngresoDatos> ObtenerLibros()
+        public List<ClsIngresoDatos> ObtenerLibros(string search = null)
         {
             List<ClsIngresoDatos> libros = new List<ClsIngresoDatos>();
 
@@ -59,7 +59,16 @@ namespace LibrosLeidos.Data
             {
                 conn.Open();
                 string query = @"SELECT id, numero_id_ano, nombre_libro, nombre_autor, saga_serie_trilogia, numero_saga, ano_leido FROM Libros ORDER BY ano_leido desc, numero_id_ano desc";
-                SqlCommand command = new SqlCommand(query, conn);
+                SqlCommand command = new SqlCommand();
+
+                if (!string.IsNullOrEmpty(search))
+                {
+                    query = @"SELECT id, numero_id_ano, nombre_libro, nombre_autor, saga_serie_trilogia, numero_saga, ano_leido FROM Libros WHERE numero_id_ano LIKE @Search OR nombre_libro LIKE @Search OR nombre_autor LIKE @Search OR saga_serie_trilogia LIKE @Search OR numero_saga LIKE @Search OR ano_leido LIKE @Search ORDER BY ano_leido desc, numero_id_ano desc";
+                    command.Parameters.Add(new SqlParameter("@Search", $"%{search}%"));
+                }
+
+                command.CommandText = query;
+                command.Connection = conn;
 
                 SqlDataReader reader = command.ExecuteReader();
 

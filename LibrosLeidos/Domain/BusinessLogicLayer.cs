@@ -26,9 +26,9 @@ namespace LibrosLeidos.Domain
             return ingreso;
         }
 
-        public List<ClsIngresoDatos> ObtenerLibros()
+        public List<ClsIngresoDatos> ObtenerLibros(string searchText = null)
         {
-           return _dataAccessLayer.ObtenerLibros();
+           return _dataAccessLayer.ObtenerLibros(searchText);
         }
 
         public void EliminarLibro(int id)

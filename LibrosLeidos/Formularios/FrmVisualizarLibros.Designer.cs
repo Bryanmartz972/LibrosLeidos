@@ -36,19 +36,20 @@ namespace LibrosLeidos
             this.btnIngresarLibro = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvLibrosLeidos = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewLinkColumn();
             this.txtBuscarLibro = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.clsIngresoDatosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clsIngresoDatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.numeroidanoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrelibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreautorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sagaserietrilogiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numerosagaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anoleidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.clsIngresoDatosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clsIngresoDatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibrosLeidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsIngresoDatosBindingSource1)).BeginInit();
@@ -207,12 +208,41 @@ namespace LibrosLeidos
             this.dgvLibrosLeidos.TabIndex = 19;
             this.dgvLibrosLeidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibrosLeidos_CellContentClick);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            this.id.Width = 125;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Editar";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Text = "Editar";
+            this.Edit.UseColumnTextForLinkValue = true;
+            this.Edit.Width = 50;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseColumnTextForLinkValue = true;
+            this.Eliminar.Width = 65;
+            // 
             // txtBuscarLibro
             // 
             this.txtBuscarLibro.Location = new System.Drawing.Point(148, 90);
             this.txtBuscarLibro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscarLibro.Name = "txtBuscarLibro";
-            this.txtBuscarLibro.Size = new System.Drawing.Size(609, 29);
+            this.txtBuscarLibro.Size = new System.Drawing.Size(599, 29);
             this.txtBuscarLibro.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtBuscarLibro.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.txtBuscarLibro.StateCommon.Border.Color2 = System.Drawing.Color.White;
@@ -237,22 +267,67 @@ namespace LibrosLeidos
             this.label2.TabIndex = 21;
             this.label2.Text = "Buscar:";
             // 
-            // clsIngresoDatosBindingSource1
+            // btnBuscar
             // 
-            this.clsIngresoDatosBindingSource1.DataSource = typeof(LibrosLeidos.Domain.ClsIngresoDatos);
-            // 
-            // clsIngresoDatosBindingSource
-            // 
-            this.clsIngresoDatosBindingSource.DataSource = typeof(LibrosLeidos.Domain.ClsIngresoDatos);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "Id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
-            this.id.Width = 125;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.Location = new System.Drawing.Point(777, 78);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnBuscar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnBuscar.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnBuscar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnBuscar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnBuscar.OverrideDefault.Border.ColorAngle = 45F;
+            this.btnBuscar.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnBuscar.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnBuscar.OverrideDefault.Border.Rounding = 10;
+            this.btnBuscar.OverrideDefault.Border.Width = 1;
+            this.btnBuscar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnBuscar.Size = new System.Drawing.Size(133, 43);
+            this.btnBuscar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnBuscar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnBuscar.StateCommon.Back.ColorAngle = 45F;
+            this.btnBuscar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnBuscar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnBuscar.StateCommon.Border.ColorAngle = 45F;
+            this.btnBuscar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnBuscar.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnBuscar.StateCommon.Border.Rounding = 10;
+            this.btnBuscar.StateCommon.Border.Width = 1;
+            this.btnBuscar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnBuscar.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnBuscar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(96)))), ((int)(((byte)(219)))));
+            this.btnBuscar.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(92)))), ((int)(((byte)(209)))));
+            this.btnBuscar.StatePressed.Back.ColorAngle = 135F;
+            this.btnBuscar.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(96)))), ((int)(((byte)(219)))));
+            this.btnBuscar.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(92)))), ((int)(((byte)(209)))));
+            this.btnBuscar.StatePressed.Border.ColorAngle = 135F;
+            this.btnBuscar.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnBuscar.StatePressed.Border.Rounding = 10;
+            this.btnBuscar.StatePressed.Border.Width = 1;
+            this.btnBuscar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnBuscar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnBuscar.StateTracking.Back.ColorAngle = 45F;
+            this.btnBuscar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.btnBuscar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(240)))));
+            this.btnBuscar.StateTracking.Border.ColorAngle = 45F;
+            this.btnBuscar.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnBuscar.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnBuscar.StateTracking.Border.Rounding = 10;
+            this.btnBuscar.StateTracking.Border.Width = 1;
+            this.btnBuscar.TabIndex = 22;
+            this.btnBuscar.Values.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // numeroidanoDataGridViewTextBoxColumn
             // 
@@ -308,25 +383,13 @@ namespace LibrosLeidos
             this.anoleidoDataGridViewTextBoxColumn.ReadOnly = true;
             this.anoleidoDataGridViewTextBoxColumn.Width = 65;
             // 
-            // Edit
+            // clsIngresoDatosBindingSource1
             // 
-            this.Edit.HeaderText = "Editar";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Text = "Editar";
-            this.Edit.UseColumnTextForLinkValue = true;
-            this.Edit.Width = 50;
+            this.clsIngresoDatosBindingSource1.DataSource = typeof(LibrosLeidos.Domain.ClsIngresoDatos);
             // 
-            // Eliminar
+            // clsIngresoDatosBindingSource
             // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseColumnTextForLinkValue = true;
-            this.Eliminar.Width = 65;
+            this.clsIngresoDatosBindingSource.DataSource = typeof(LibrosLeidos.Domain.ClsIngresoDatos);
             // 
             // FrmVisualizarLibros
             // 
@@ -334,6 +397,7 @@ namespace LibrosLeidos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(1179, 654);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBuscarLibro);
             this.Controls.Add(this.dgvLibrosLeidos);
@@ -380,5 +444,6 @@ namespace LibrosLeidos
         private System.Windows.Forms.DataGridViewTextBoxColumn anoleidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewLinkColumn Edit;
         private System.Windows.Forms.DataGridViewLinkColumn Eliminar;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnBuscar;
     }
 }

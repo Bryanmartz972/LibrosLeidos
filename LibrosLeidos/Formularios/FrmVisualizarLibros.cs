@@ -27,9 +27,9 @@ namespace LibrosLeidos
             CargarLibros();
         }
 
-        private void CargarLibros()
+        private void CargarLibros(string searchText = null)
         {
-            List<ClsIngresoDatos> libros = _businessLogicLayer.ObtenerLibros();
+            List<ClsIngresoDatos> libros = _businessLogicLayer.ObtenerLibros(searchText);
             dgvLibrosLeidos.DataSource = libros;
         }
 
@@ -71,6 +71,12 @@ namespace LibrosLeidos
         {
             _businessLogicLayer.EliminarLibro(id);
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            CargarLibros(txtBuscarLibro.Text);
+            txtBuscarLibro.Text = String.Empty;
         }
     }
 }
