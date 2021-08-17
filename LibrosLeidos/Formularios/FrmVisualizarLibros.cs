@@ -69,8 +69,9 @@ namespace LibrosLeidos
 
         private void EliminarLibro(int id)
         {
-            _businessLogicLayer.EliminarLibro(id);
-
+            DialogResult dialogResult = MessageBox.Show("Desea eliminar este libro?", "Eliminar libro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+                _businessLogicLayer.EliminarLibro(id);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
