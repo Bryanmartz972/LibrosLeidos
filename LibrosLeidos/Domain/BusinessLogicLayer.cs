@@ -20,8 +20,8 @@ namespace LibrosLeidos.Domain
         {
             if (ingreso.id == 0)
                 _dataAccessLayer.InsertarLibro(ingreso);
-            //else
-            // _dataAccessLayer.ModificarLibro();
+            else
+                _dataAccessLayer.ModificarLibro(ingreso);
 
             return ingreso;
         }
@@ -29,6 +29,11 @@ namespace LibrosLeidos.Domain
         public List<ClsIngresoDatos> ObtenerLibros()
         {
            return _dataAccessLayer.ObtenerLibros();
+        }
+
+        public void EliminarLibro(int id)
+        {
+            _dataAccessLayer.EliminarLibro(id);
         }
     }
 }

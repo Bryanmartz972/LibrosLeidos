@@ -16,7 +16,9 @@ namespace LibrosLeidos
     public partial class FrmIngresoLibros : KryptonForm
     {
         private BusinessLogicLayer _businessLogicLayer = new BusinessLogicLayer();
-        private ClsIngresoDatos ingreso = new ClsIngresoDatos();
+        private ClsIngresoDatos ingreso;
+        private ClsIngresoDatos _ingreso;
+
 
         public FrmIngresoLibros()
         {
@@ -25,11 +27,14 @@ namespace LibrosLeidos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            ingreso = new ClsIngresoDatos();
             ingreso.numero_id_ano = int.Parse(txtNumeroLibroLeido.Text.Trim());
             ingreso.nombre_libro = txtNombreLibro.Text.Trim();
             ingreso.nombre_autor = txtAutorLibro.Text.Trim();
             ingreso.ano_leido = Convert.ToInt32(nmrAnoLeido.Value);
             ingreso.saga_serie_trilogia = txtSagaSerieTrilogia.Text.Trim();
+
+            ingreso.id = _ingreso != null ? _ingreso.id : 0;
 
             if (String.IsNullOrEmpty(txtNumeroSaga.Text))
                 ingreso.numero_saga = 0;
@@ -39,7 +44,7 @@ namespace LibrosLeidos
             try
             {
                 _businessLogicLayer.GuardarLibro(ingreso);
-                limpiarCampos();
+                LimpiarCampos();
             }
             catch (Exception)
             {
@@ -49,6 +54,7 @@ namespace LibrosLeidos
 
         private void btnLibrosLeidos_Click(object sender, EventArgs e)
         {
+            ingreso = new ClsIngresoDatos();
             this.Hide();
             ingreso.AbrirFrmVisualizarDatos();
             this.Close();
@@ -75,13 +81,29 @@ namespace LibrosLeidos
             }
         }
 
-        public void limpiarCampos()
+        public void LimpiarCampos()
         {
             txtAutorLibro.Text = String.Empty;
             txtNombreLibro.Text = String.Empty;
             txtNumeroSaga.Text = String.Empty;
             txtNumeroLibroLeido.Text = String.Empty;
             txtSagaSerieTrilogia.Text = String.Empty;
+        }
+
+        public void CargarLibros(ClsIngresoDatos ingreso)
+        {
+            _ingreso = ingreso;
+
+            if (ingreso != null)
+            {
+                LimpiarCampos();
+                txtNombreLibro.Text = ingreso.nombre_libro;
+                txtAutorLibro.Text = ingreso.nombre_autor;
+                txtNumeroSaga.Text = ingreso.numero_saga.ToString();
+                txtNumeroLibroLeido.Text = ingreso.numero_id_ano.ToString();
+                txtSagaSerieTrilogia.Text = ingreso.saga_serie_trilogia;
+                nmrAnoLeido.Value = ingreso.ano_leido;
+            }
         }
     }
 }

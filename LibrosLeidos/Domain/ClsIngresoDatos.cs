@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibrosLeidos.Domain
 {
-    class ClsIngresoDatos
+    public class ClsIngresoDatos
     {
         public int id { get; set; }
         public int numero_id_ano { get; set; }
@@ -21,7 +21,5 @@ namespace LibrosLeidos.Domain
             FrmVisualizarLibros frmVisualizarLibros = new FrmVisualizarLibros();
             frmVisualizarLibros.ShowDialog();
         }
-
-
     }
 }

@@ -38,6 +38,39 @@ namespace LibrosLeidos
             this.Hide();
             datos.AbrirFrmIngresoLibros();
             this.Close();
-        }  
+        }
+
+        private void dgvLibrosLeidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewLinkCell cell = (DataGridViewLinkCell)dgvLibrosLeidos.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+            if(cell.Value.ToString() == "Editar")
+            {
+                FrmIngresoLibros ingreso = new FrmIngresoLibros();
+                ingreso.CargarLibros(new ClsIngresoDatos {
+                    id = int.Parse(dgvLibrosLeidos.Rows[e.RowIndex].Cells[0].Value.ToString()),
+                    numero_id_ano = int.Parse(dgvLibrosLeidos.Rows[e.RowIndex].Cells[1].Value.ToString()),
+                    nombre_libro = dgvLibrosLeidos.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                    nombre_autor = dgvLibrosLeidos.Rows[e.RowIndex].Cells[3].Value.ToString(),
+                    saga_serie_trilogia = dgvLibrosLeidos.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                    numero_saga = double.Parse(dgvLibrosLeidos.Rows[e.RowIndex].Cells[5].Value.ToString()),
+                    ano_leido = int.Parse(dgvLibrosLeidos.Rows[e.RowIndex].Cells[6].Value.ToString()),
+                });
+                this.Hide();
+                ingreso.ShowDialog(this);
+                this.Close();
+            }
+            else if(cell.Value.ToString() == "Eliminar")
+            {
+                EliminarLibro(int.Parse(dgvLibrosLeidos.Rows[e.RowIndex].Cells[0].Value.ToString()));
+                CargarLibros();
+            }
+        }
+
+        private void EliminarLibro(int id)
+        {
+            _businessLogicLayer.EliminarLibro(id);
+
+        }
     }
 }
