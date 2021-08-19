@@ -197,14 +197,36 @@ namespace LibrosLeidos
             this.Edit,
             this.Eliminar});
             this.dgvLibrosLeidos.DataSource = this.clsIngresoDatosBindingSource1;
+            this.dgvLibrosLeidos.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Mixed;
+            this.dgvLibrosLeidos.GridStyles.StyleColumn = ComponentFactory.Krypton.Toolkit.GridStyle.Sheet;
             this.dgvLibrosLeidos.Location = new System.Drawing.Point(5, 144);
             this.dgvLibrosLeidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLibrosLeidos.Name = "dgvLibrosLeidos";
+            this.dgvLibrosLeidos.RowHeadersVisible = false;
             this.dgvLibrosLeidos.RowHeadersWidth = 51;
             this.dgvLibrosLeidos.RowTemplate.Height = 24;
-            this.dgvLibrosLeidos.Size = new System.Drawing.Size(1152, 431);
+            this.dgvLibrosLeidos.Size = new System.Drawing.Size(1152, 499);
+            this.dgvLibrosLeidos.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvLibrosLeidos.StateCommon.Background.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvLibrosLeidos.StateCommon.Background.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.dgvLibrosLeidos.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
-            this.dgvLibrosLeidos.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvLibrosLeidos.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvLibrosLeidos.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvLibrosLeidos.StateCommon.HeaderColumn.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.dgvLibrosLeidos.StateCommon.HeaderColumn.Border.Color1 = System.Drawing.Color.Transparent;
+            this.dgvLibrosLeidos.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dgvLibrosLeidos.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.Color.White;
+            this.dgvLibrosLeidos.StateCommon.HeaderColumn.Content.Color2 = System.Drawing.Color.White;
+            this.dgvLibrosLeidos.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvLibrosLeidos.StateCommon.HeaderRow.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvLibrosLeidos.StateCommon.HeaderRow.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvLibrosLeidos.StateCommon.HeaderRow.Border.Color1 = System.Drawing.Color.Transparent;
+            this.dgvLibrosLeidos.StateCommon.HeaderRow.Border.Color2 = System.Drawing.Color.Transparent;
+            this.dgvLibrosLeidos.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.dgvLibrosLeidos.TabIndex = 19;
             this.dgvLibrosLeidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibrosLeidos_CellContentClick);
             // 

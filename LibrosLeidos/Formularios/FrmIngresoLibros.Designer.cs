@@ -254,6 +254,7 @@ namespace LibrosLeidos
             0,
             0,
             0});
+            this.nmrAnoLeido.ValueChanged += new System.EventHandler(this.nmrAnoLeido_ValueChanged);
             // 
             // txtNombreLibro
             // 

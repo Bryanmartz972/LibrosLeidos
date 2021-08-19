@@ -46,7 +46,7 @@ namespace LibrosLeidos
 
             if(cell.Value.ToString() == "Editar")
             {
-                FrmIngresoLibros ingreso = new FrmIngresoLibros();
+                FrmIngresoLibros ingreso = new FrmIngresoLibros(true);
                 ingreso.CargarLibros(new ClsIngresoDatos {
                     id = int.Parse(dgvLibrosLeidos.Rows[e.RowIndex].Cells[0].Value.ToString()),
                     numero_id_ano = int.Parse(dgvLibrosLeidos.Rows[e.RowIndex].Cells[1].Value.ToString()),

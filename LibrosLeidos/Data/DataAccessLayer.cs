@@ -165,5 +165,33 @@ namespace LibrosLeidos.Data
                 conn.Close();
             }
         }
+
+        public int ObtenerAnoLeido(int ano)
+        {
+            try
+            {
+                int valor = 0;
+                conn.Open();
+                string query =  @"SELECT TOP 1 numero_id_ano FROM Libros WHERE ano_leido = @numero_id_ano ORDER BY numero_id_ano desc";
+                SqlParameter numeroIdAno = new SqlParameter("@numero_id_ano", ano);
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.Add(numeroIdAno);
+                SqlDataReader da = command.ExecuteReader();
+                while (da.Read())
+                {
+                    valor = int.Parse(da.GetValue(0).ToString());
+                }
+
+                return valor;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

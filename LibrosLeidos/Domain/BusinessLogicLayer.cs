@@ -10,6 +10,7 @@ namespace LibrosLeidos.Domain
     class BusinessLogicLayer
     {
         private DataAccessLayer _dataAccessLayer;
+        public static bool editar;
 
         public BusinessLogicLayer()
         {
@@ -35,5 +36,12 @@ namespace LibrosLeidos.Domain
         {
             _dataAccessLayer.EliminarLibro(id);
         }
+
+        public int ObtenerAnoLeido(int ano)
+        {
+            return _dataAccessLayer.ObtenerAnoLeido(ano);
+        }
+
+        
     }
 }

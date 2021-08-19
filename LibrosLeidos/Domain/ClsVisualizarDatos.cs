@@ -10,7 +10,7 @@ namespace LibrosLeidos.Domain
     {
         public void AbrirFrmIngresoLibros()
         {
-            FrmIngresoLibros frmIngresoLibros = new FrmIngresoLibros();
+            FrmIngresoLibros frmIngresoLibros = new FrmIngresoLibros(false);
             frmIngresoLibros.ShowDialog();
         }
     }

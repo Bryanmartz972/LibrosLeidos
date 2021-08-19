@@ -18,11 +18,12 @@ namespace LibrosLeidos
         private BusinessLogicLayer _businessLogicLayer = new BusinessLogicLayer();
         private ClsIngresoDatos ingreso;
         private ClsIngresoDatos _ingreso;
+        public static bool editar = false;
 
-
-        public FrmIngresoLibros()
+        public FrmIngresoLibros(bool editar1)
         {
             InitializeComponent();
+            editar = editar1;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -45,6 +46,7 @@ namespace LibrosLeidos
             {
                 _businessLogicLayer.GuardarLibro(ingreso);
                 LimpiarCampos();
+                BusinessLogicLayer.editar = false;
             }
             catch (Exception)
             {
@@ -103,6 +105,15 @@ namespace LibrosLeidos
                 txtNumeroLibroLeido.Text = ingreso.numero_id_ano.ToString();
                 txtSagaSerieTrilogia.Text = ingreso.saga_serie_trilogia;
                 nmrAnoLeido.Value = ingreso.ano_leido;
+            }
+        }
+
+        private void nmrAnoLeido_ValueChanged(object sender, EventArgs e)
+        {
+
+            if(editar == false)
+            {
+                txtNumeroLibroLeido.Text = (_businessLogicLayer.ObtenerAnoLeido(int.Parse(nmrAnoLeido.Value.ToString())) + 1).ToString();
             }
         }
     }
